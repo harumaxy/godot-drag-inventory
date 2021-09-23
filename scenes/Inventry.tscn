@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/ItemSlot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/ItemIcon.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/InventryDisplay.gd" type="Script" id=3]
 [ext_resource path="res://NotoSans-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
@@ -18,12 +17,11 @@ default_font = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 2 )
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
+[node name="SlotLayer" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -39,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="SlotLayer"]
 margin_left = 40.9674
 margin_right = 105.967
 margin_bottom = 34.0
@@ -48,7 +46,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="SlotLayer"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -63,17 +61,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bag" type="VBoxContainer" parent="Panel/HBoxContainer"]
+[node name="Bag" type="VBoxContainer" parent="SlotLayer/HBoxContainer"]
 margin_right = 292.0
 margin_bottom = 426.0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Bag"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Bag"]
 margin_right = 292.0
 margin_bottom = 34.0
 text = "Bag"
 align = 1
 
-[node name="Slots" type="GridContainer" parent="Panel/HBoxContainer/Bag"]
+[node name="Slots" type="GridContainer" parent="SlotLayer/HBoxContainer/Bag"]
 margin_top = 38.0
 margin_right = 292.0
 margin_bottom = 330.0
@@ -84,7 +82,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ItemSlot" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -94,7 +92,7 @@ margin_top = 0.0
 margin_right = 94.0
 margin_bottom = 94.0
 
-[node name="ItemSlot2" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot2" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -104,7 +102,7 @@ margin_top = 0.0
 margin_right = 193.0
 margin_bottom = 94.0
 
-[node name="ItemSlot3" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot3" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -114,7 +112,7 @@ margin_top = 0.0
 margin_right = 292.0
 margin_bottom = 94.0
 
-[node name="ItemSlot4" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot4" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -124,7 +122,7 @@ margin_top = 99.0
 margin_right = 94.0
 margin_bottom = 193.0
 
-[node name="ItemSlot5" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot5" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -134,7 +132,7 @@ margin_top = 99.0
 margin_right = 193.0
 margin_bottom = 193.0
 
-[node name="ItemSlot6" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot6" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -144,7 +142,7 @@ margin_top = 99.0
 margin_right = 292.0
 margin_bottom = 193.0
 
-[node name="ItemSlot7" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot7" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -154,7 +152,7 @@ margin_top = 198.0
 margin_right = 94.0
 margin_bottom = 292.0
 
-[node name="ItemSlot8" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot8" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -164,7 +162,7 @@ margin_top = 198.0
 margin_right = 193.0
 margin_bottom = 292.0
 
-[node name="ItemSlot9" parent="Panel/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
+[node name="ItemSlot9" parent="SlotLayer/HBoxContainer/Bag/Slots" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -174,18 +172,18 @@ margin_top = 198.0
 margin_right = 292.0
 margin_bottom = 292.0
 
-[node name="Equipment" type="VBoxContainer" parent="Panel/HBoxContainer"]
+[node name="Equipment" type="VBoxContainer" parent="SlotLayer/HBoxContainer"]
 margin_left = 392.0
 margin_right = 682.0
 margin_bottom = 426.0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Equipment"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Equipment"]
 margin_right = 290.0
 margin_bottom = 34.0
 text = "Equipment"
 align = 1
 
-[node name="Slots" type="HBoxContainer" parent="Panel/HBoxContainer/Equipment"]
+[node name="Slots" type="HBoxContainer" parent="SlotLayer/HBoxContainer/Equipment"]
 margin_top = 38.0
 margin_right = 290.0
 margin_bottom = 426.0
@@ -194,11 +192,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/HBoxContainer/Equipment/Slots"]
+[node name="CenterContainer" type="CenterContainer" parent="SlotLayer/HBoxContainer/Equipment/Slots"]
 margin_right = 94.0
 margin_bottom = 388.0
 
-[node name="RightHand" parent="Panel/HBoxContainer/Equipment/Slots/CenterContainer" instance=ExtResource( 1 )]
+[node name="RightHand" parent="SlotLayer/HBoxContainer/Equipment/Slots/CenterContainer" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -209,7 +207,7 @@ margin_right = 94.0
 margin_bottom = 241.0
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Equipment/Slots/CenterContainer/RightHand"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Equipment/Slots/CenterContainer/RightHand"]
 margin_left = 7.0
 margin_top = 11.0
 margin_right = 87.0
@@ -218,13 +216,13 @@ text = "Right
 Hand"
 align = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer/Equipment/Slots"]
+[node name="VBoxContainer" type="VBoxContainer" parent="SlotLayer/HBoxContainer/Equipment/Slots"]
 margin_left = 98.0
 margin_right = 192.0
 margin_bottom = 388.0
 alignment = 1
 
-[node name="Head" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
+[node name="Head" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -234,7 +232,7 @@ margin_top = 0.0
 margin_right = 94.0
 margin_bottom = 94.0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer/Head"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer/Head"]
 margin_left = 7.0
 margin_top = 30.0
 margin_right = 87.0
@@ -242,7 +240,7 @@ margin_bottom = 64.0
 text = "Head"
 align = 1
 
-[node name="Torso" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
+[node name="Torso" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -252,7 +250,7 @@ margin_top = 98.0
 margin_right = 94.0
 margin_bottom = 192.0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer/Torso"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer/Torso"]
 margin_left = 7.0
 margin_top = 30.0
 margin_right = 87.0
@@ -260,7 +258,7 @@ margin_bottom = 64.0
 text = "Torso"
 align = 1
 
-[node name="Waist" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
+[node name="Waist" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -270,7 +268,7 @@ margin_top = 196.0
 margin_right = 94.0
 margin_bottom = 290.0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer/Waist"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer/Waist"]
 margin_left = 7.0
 margin_top = 30.0
 margin_right = 87.0
@@ -278,7 +276,7 @@ margin_bottom = 64.0
 text = "Waist"
 align = 1
 
-[node name="Feet" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
+[node name="Feet" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -288,7 +286,7 @@ margin_top = 294.0
 margin_right = 94.0
 margin_bottom = 388.0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Equipment/Slots/VBoxContainer/Feet"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Equipment/Slots/VBoxContainer/Feet"]
 margin_left = 7.0
 margin_top = 30.0
 margin_right = 87.0
@@ -296,7 +294,7 @@ margin_bottom = 64.0
 text = "Feet"
 align = 1
 
-[node name="CenterContainer2" type="CenterContainer" parent="Panel/HBoxContainer/Equipment/Slots"]
+[node name="CenterContainer2" type="CenterContainer" parent="SlotLayer/HBoxContainer/Equipment/Slots"]
 margin_left = 196.0
 margin_right = 290.0
 margin_bottom = 388.0
@@ -304,7 +302,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeftHand" parent="Panel/HBoxContainer/Equipment/Slots/CenterContainer2" instance=ExtResource( 1 )]
+[node name="LeftHand" parent="SlotLayer/HBoxContainer/Equipment/Slots/CenterContainer2" instance=ExtResource( 1 )]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -315,7 +313,7 @@ margin_right = 94.0
 margin_bottom = 241.0
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="Panel/HBoxContainer/Equipment/Slots/CenterContainer2/LeftHand"]
+[node name="Label" type="Label" parent="SlotLayer/HBoxContainer/Equipment/Slots/CenterContainer2/LeftHand"]
 margin_left = 7.0
 margin_top = 11.0
 margin_right = 87.0
@@ -324,14 +322,13 @@ text = "Left
 Hand"
 align = 1
 
-[node name="IconLayer" type="Control" parent="."]
+[node name="ItemLayer" type="Control" parent="."]
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ItemIcon" parent="IconLayer" instance=ExtResource( 2 )]
-anchor_left = 0.0
-margin_left = 183.576
-margin_top = 142.866
-margin_right = 247.576
-margin_bottom = 206.866
+[node name="ItemIcon" parent="ItemLayer" instance=ExtResource( 2 )]
+margin_left = 397.877
+margin_top = 47.6901
+margin_right = 461.877
+margin_bottom = 111.69
