@@ -1,0 +1,2 @@
+icon.png filter=lfs diff=lfs merge=lfs -text
+NotoSans-Regular.ttf filter=lfs diff=lfs merge=lfs -text
