@@ -2,7 +2,7 @@
 
 Godot v3.3.3.stable で作成
 
-![](https://github.com/harumaxy/InventorySystem/main/inventory.gif)
+![](./inventory.gif)
 
 - using `Control` Node
   - override virtual methods
